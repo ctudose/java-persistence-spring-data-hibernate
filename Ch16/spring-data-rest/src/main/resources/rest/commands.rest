@@ -1,0 +1,29 @@
+###
+GET http://localhost:8081/users
+
+###
+GET http://localhost:8081/users/1
+
+###
+PATCH http://localhost:8081/users/1
+Content-Type: application/json
+
+{
+  "name": "Amelia Jones",
+  "isRegistered": "true"
+}
+
+###
+DELETE http://localhost:8081/users/1
+
+###
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+  "name": "John Smith"
+}
+
+###
+GET http://localhost:8081/users/1
+If-None-Match: "0"

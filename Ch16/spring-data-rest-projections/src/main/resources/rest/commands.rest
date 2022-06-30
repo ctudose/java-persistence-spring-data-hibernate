@@ -1,0 +1,36 @@
+###
+GET http://localhost:8081/users
+
+###
+GET http://localhost:8081/users/1
+
+###
+GET http://localhost:8081/users/1?projection=summary
+
+###
+PATCH http://localhost:8081/users/1
+Content-Type: application/json
+
+{
+  "name": "Amelia Jones",
+  "isRegistered": "true"
+}
+
+###
+DELETE http://localhost:8081/users/1
+
+###
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "isRegistered": "true",
+  "address": {"street":"55 Flowers Streets", "zipCode":"12345", "city":"Boston", "state":"MA"}
+}
+
+###
+GET http://localhost:8081/users/1
+If-None-Match: "0"
+
+
